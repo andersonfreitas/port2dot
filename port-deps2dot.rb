@@ -65,11 +65,11 @@ all.keys.sort.each do |name|
 	if deps.count > 0
 		deps.each {|d| 
 		  puts "\t\"#{name}\" -> \"#{d}\";" if not requested.include?(name)
-		  puts "\t\"#{name}\" [fillcolor = red] -> \"#{d}\";" if requested.include?(name)
+		  puts "\t\"#{name}\" -> \"#{d}\";" if requested.include?(name)
 		}
 	else
 		puts "\t\"#{name}\";" if not requested.include?(name)
-		puts "\t\"#{name}\" [fillcolor = red];" if requested.include?(name)
+		puts "\t\"#{name}\"" if requested.include?(name)
 	end
 end
 
